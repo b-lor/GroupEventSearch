@@ -1,0 +1,33 @@
+SET IDENTITY_INSERT dbo.Establishment ON
+
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('281', 'Fast Food');
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('31', 'Bakery');
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('1', 'Café');
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('16', 'Casual Dining');
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('278', 'Wine Bar');
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('7', 'Bar');
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('21', 'Quick Bites');
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('6', 'Pub');
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('285', 'Fast Casual');
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('23', 'Dessert Parlour');
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('275', 'Pizzeria');
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('18', 'Fine Dining');
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('81', 'Food Truck');
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('91', 'Bistro');
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('24', 'Deli');
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('283', 'Brewery');
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('295', 'Noodle Shop');
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('101', 'Diner');
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('271', 'Sandwich Shop');
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('286', 'Coffee Shop');
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('161', 'Microbrewery');
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('5', 'Lounge');
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('272', 'Cocktail Bar');
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('284', 'Juice Bar');
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('292', 'Beer Garden');
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('282', 'Taqueria');
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('309', 'Steakhouse');
+INSERT INTO dbo.Establishment (EstablishmentId, EstablishmentName)	VALUES  ('8', 'Club');
+
+
+SET IDENTITY_INSERT dbo.Establishment OFF
