@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewData["Title"] = "Event";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Event</h2>
+
+<div class="navbar">
+    <div class="col-sm-12" ng-app="App" ng-controller="AppController" ng-init="init(location, category, startDate, endDate)">
+        <form asp-action="Index" asp-controller="Search" method="GET" data-ajax="InsertionMode.Replace" data-ajax-update="SearchResult">
+
+            <input type="text" placeholder="Location" class="col-sm-2 form-control btn-long" name="location" ng-model="location" />
+            <input type="text" placeholder="Category" class="col-sm-2 form-control btn-long" name="category" ng-model="category" />
+
+            <div class="input-group">
+                <label for="startDate" class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </label>
+                <input id="startDate" type="text" placeholder="Start Date" class="date-picker form-control" name="startDate" ng-model="startDate" />
+            </div>
+
+            <div class="input-group">
+                <label for="endDate" class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </label>
+                <input id="endDate" type="text" placeholder="End Date" class="date-picker form-control" name="endDate" ng-model="endDate" />
+            </div>
+
+            <input id="search" class="btn btn-block btn-info" type="submit" value="Search" />
+        </form>
+    </div>
+</div>
+
