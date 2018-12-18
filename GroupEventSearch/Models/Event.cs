@@ -13,6 +13,8 @@ namespace GroupEventSearch.Models
         public Dictionary<string, JToken> Image { get; set; }
         public DateTime StartDatetime { get; set; }
         public string Location { get; set; }
+        public string Latitude { get; set; }
+        public string Longitude { get; set; }
 
     }
 }

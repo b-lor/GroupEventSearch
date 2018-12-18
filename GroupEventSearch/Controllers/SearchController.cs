@@ -34,6 +34,8 @@ namespace GroupEventSearch.Controllers
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public int Page { get; set; }
+        public string Longitude { get; set; }
+        public string Latitude { get; set; }
 
 
         // GET: Search
@@ -119,8 +121,11 @@ namespace GroupEventSearch.Controllers
                         Image = ev["image"].HasValues ? ev["image"].ToObject<Dictionary<string, JToken>>() : null,
                         StartDatetime = (DateTime)ev["start_time"],
                         Location =
-                            (string)ev["venue_address"] + ", " + (string)ev["city_name"] + ", " +
-                            (string)ev["region_abbr"] + ", " + (string)ev["country_name"],
+                            //(string)ev["venue_address"] + ", " + (string)ev["city_name"] + ", " +
+                            //(string)ev["region_abbr"] + ", " + (string)ev["country_name"],
+                            (string)ev["venue_address"] + ", " + (string)ev["city_name"],
+                        Latitude = (string)ev["latitude"],
+                        Longitude = (string)ev["longitude"],
                     };
                     events.Add(e);
                 }

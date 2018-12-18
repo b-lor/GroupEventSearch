@@ -73,9 +73,47 @@
         @*Page @(ViewBag.Model.PageCount < ViewBag.Model.PageNumber ? 0 : ViewBag.Model.PageNumber) of @ViewBag.Model.PageCount*@
         @*@Html.PagedListPager(ViewBag.Model as PagedList.IPagedList<GroupEventSearch.Models.Events>, page => Url.Action("Index", "Search", new { page, sortOrder = ViewBag.CurrentSort }),
 
-        PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new PagedListRenderOptions() { DisplayLinkToPreviousPage = PagedListDisplayMode.IfNeeded }
-            , new System.Web.Mvc.Ajax.AjaxOptions() { HttpMethod = "GET", UpdateTargetId = "SearchResult" }))*@
+            PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new PagedListRenderOptions() { DisplayLinkToPreviousPage = PagedListDisplayMode.IfNeeded }
+                , new System.Web.Mvc.Ajax.AjaxOptions() { HttpMethod = "GET", UpdateTargetId = "SearchResult" }))*@
 
     </div>
-</div>
+
+    <style>
+
+            #map {
+                height: 800px;
+                width: 800px;
+            }
+        </style>
+        <div class="row">
+            <div id="map"></div>
+            <script>
+                var map;
+                function initMap() {
+                    var latLng = new google.maps.LatLng(43.0389, -87.9065);
+
+                    map = new google.maps.Map(document.getElementById('map'), {
+                        zoom: 14,
+                        center: latLng
+
+                    });
+
+                        @foreach(var ev in ViewBag.Model){
+         <text>
+              var location = new google.maps.LatLng(@ev.Latitude, @ev.Longitude);
+              var marker = new google.maps.Marker({
+              map: map,
+              position: location
+              });
+        </text>
+        }
+
+                }
+
+            </script>
+            <script async defer
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPd_kaIJibv8PaW5y-FmYqXnxuD1jRT14&callback=initMap">
+            </script>
+        </div>
+
 
