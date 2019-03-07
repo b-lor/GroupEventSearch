@@ -19,6 +19,7 @@ namespace GroupEventSearch.Controllers
         public IActionResult GetCity()
         {
             return View();
+            // Comment
         }
 
         [HttpPost]
